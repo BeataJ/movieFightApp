@@ -10,8 +10,10 @@ const fetchData = async searchTerm => {
 };
 
 const input = document.querySelector('input');
-input.addEventListener('input', e => {
+const onInput = e => {
   e.preventDefault();
 
   fetchData(e.target.value);
-});
+};
+
+input.addEventListener('input', onInput);
