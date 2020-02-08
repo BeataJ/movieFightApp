@@ -13,11 +13,14 @@ const input = document.querySelector('input');
 
 let timeoutId;
 const onInput = e => {
+  if (timeoutId) {
+    clearTimeout(timeoutId);
+  }
   timeoutId = setTimeout(() => {
     e.preventDefault();
 
     fetchData(e.target.value);
-  }, 100);
+  }, 1000);
 };
 
 input.addEventListener('input', onInput);
