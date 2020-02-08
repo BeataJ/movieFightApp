@@ -10,10 +10,14 @@ const fetchData = async searchTerm => {
 };
 
 const input = document.querySelector('input');
-const onInput = e => {
-  e.preventDefault();
 
-  fetchData(e.target.value);
+let timeoutId;
+const onInput = e => {
+  timeoutId = setTimeout(() => {
+    e.preventDefault();
+
+    fetchData(e.target.value);
+  }, 100);
 };
 
 input.addEventListener('input', onInput);
