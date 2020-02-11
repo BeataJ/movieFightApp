@@ -11,8 +11,9 @@ const fetchData = async searchTerm => {
 
 const input = document.querySelector('input');
 
-const onInput = e => {
-  fetchData(e.target.value);
+const onInput = async e => {
+  const movies = await fetchData(e.target.value);
+  console.log(movies);
 };
 
 input.addEventListener('input', debounce(onInput, 500));
