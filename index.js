@@ -25,6 +25,8 @@ root.innerHTML = `
 `;
 
 const input = document.querySelector('input');
+const dropdown = document.querySelector('.dropdown');
+const resultsWrapper = document.querySelector('.results');
 
 const onInput = async e => {
   const movies = await fetchData(e.target.value);
