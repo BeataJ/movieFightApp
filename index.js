@@ -66,3 +66,14 @@ document.addEventListener('click', e => {
     input.value = '';
   }
 });
+
+const onMovieSelect = async movie => {
+  const response = await axios.get('http://www.omdbapi.com/', {
+    params: {
+      apikey: '40eae946',
+      i: movie.imdbID
+    }
+  });
+
+  console.log(response.data);
+};
