@@ -16,7 +16,7 @@ const fetchData = async searchTerm => {
 const root = document.querySelector('.autocomplete');
 root.innerHTML = `
   <label><b>Search For a Movie</b></label>
-  <input class="input" />
+  <input  class="input"/>
   <br>
   <div class="dropdown">
     <div class="dropdown-menu">
@@ -36,6 +36,7 @@ const onInput = async event => {
   dropdown.classList.add('is-active');
   for (let movie of movies) {
     const option = document.createElement('a');
+    const imgSrc = item.Poster === 'N/A' ? '' : item.Poster;
 
     option.classList.add('dropdown-item');
     option.innerHTML = `
