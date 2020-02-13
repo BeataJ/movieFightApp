@@ -22,7 +22,9 @@ createAutoComplete({
       ${movie.Title} (${movie.Year})
     `;
   },
-  onOptionSelect: movie => {}
+  onOptionSelect: movie => {
+    onMovieSelect(movie);
+  }
 });
 
 const onMovieSelect = async movie => {
