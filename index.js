@@ -25,7 +25,7 @@ createAutoComplete({
   onOptionSelect: movie => {
     onMovieSelect(movie);
   },
-  inputValue = (movie) => {
+  inputValue: movie => {
     return movie.Title;
   }
 });
