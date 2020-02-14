@@ -33,6 +33,11 @@ createAutoComplete({
   root: document.querySelector('#left-autocomplete')
 });
 
+createAutoComplete({
+  ...autoCompleteConfig,
+  root: document.querySelector('#right-autocomplete')
+});
+
 const onMovieSelect = async movie => {
   const response = await axios.get('http://www.omdbapi.com/', {
     params: {
